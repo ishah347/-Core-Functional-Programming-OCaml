@@ -69,7 +69,7 @@ let _prob1e : int =
 (*
 _prob1f is not a list of tuples of two arguments that are both of type string.
 Instead, it is a list of tuples of two arguments, the first of which is a 
-string, while the second appears to be either an 'a option or an integer. To 
+string, while the second appears to be either an a' option or an integer. To 
 make the second argument in each tuple consistent, they should all be
 converted to type int option. 
 
@@ -345,7 +345,7 @@ let to_run_length (lst : char list) : (int * char) list =
   let rec compressor i ch lst_1 = 
     match lst_1 with
     | [] -> [(i, ch)]
-    | head :: tail -> if ch != head then (i, ch) :: compressor 0 head lst_1
+    | head :: tail -> if ch <> head then (i, ch) :: compressor 0 head lst_1
                       else compressor (i + 1) ch tail
   in match lst with
   | [] -> [] 
